@@ -1,0 +1,695 @@
+/* Tổng thể trang đăng ký thực tập - Trải rộng full màn hình */
+.internship-registration {
+    padding: 24px 32px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    font-family: inherit;
+    color: #1f2937;
+    box-sizing: border-box;
+  }
+  
+  /* Phần giới thiệu (Intro banner) */
+  .internship-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f4ff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 20px;
+  }
+  
+  .internship-intro-content {
+    flex: 1;
+  }
+  
+  .internship-heading {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  
+  .internship-label,
+  .internship-sub-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #3b82f6;
+    text-transform: uppercase;
+  }
+  
+  .internship-intro-content h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 6px 0;
+  }
+  
+  .internship-intro-content p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+    max-width: 800px;
+  }
+  
+  .internship-major {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 13px;
+  }
+  
+  .internship-major strong {
+    color: #0f172a;
+  }
+  
+  .internship-intro-icon {
+    color: #3b82f6;
+    opacity: 0.85;
+    padding-left: 20px;
+  }
+  
+  /* Thanh công cụ tiêu đề & nút làm mới */
+  .internship-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .internship-toolbar h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 2px 0;
+    color: #1e293b;
+  }
+  
+  .internship-toolbar p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+  }
+  
+  .internship-refresh {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .internship-refresh:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+  }
+  
+  /* Thanh tìm kiếm */
+  .internship-search {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 9px 14px;
+    gap: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .internship-search svg {
+    color: #94a3b8;
+  }
+  
+  .internship-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+    color: #1e293b;
+    background: transparent;
+  }
+  
+  .internship-search input::placeholder {
+    color: #94a3b8;
+  }
+  
+  /* Lưới hiển thị danh sách - Trải rộng full màn hình */
+  .internship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* Thẻ card chi tiết */
+  .internship-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .internship-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  }
+  
+  .internship-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .internship-card-icon {
+    background: #eff6ff;
+    color: #3b82f6;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .internship-status {
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+  }
+  
+  .internship-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0 0 8px 0;
+  }
+  
+  .internship-company {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 10px;
+  }
+  
+  .internship-card-info {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: #475569;
+    margin-bottom: 12px;
+    background: #f8fafc;
+    padding: 8px 10px;
+    border-radius: 6px;
+  }
+  
+  .internship-card-info div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .internship-description,
+  .internship-requirement {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .internship-description strong,
+  .internship-requirement strong {
+    display: block;
+    font-size: 12px;
+    color: #334155;
+    margin-bottom: 2px;
+  }
+  
+  .internship-description p,
+  .internship-requirement p {
+    color: #64748b;
+    margin: 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Nút đăng ký */
+  .internship-register-button {
+    width: 100%;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: not-allowed;
+    margin-top: auto;
+  }
+  
+  /* Thông báo trạng thái */
+  .internship-message,
+  .internship-empty {
+    text-align: center;
+    padding: 40px 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    color: #64748b;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .internship-message p,
+  .internship-empty p {
+    font-size: 13px;
+    margin: 8px 0 16px 0;
+  }
+  
+/* Thông báo kết quả */
+.internship-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.internship-notice-success {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.internship-notice-error {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.internship-notice button {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Nút đăng ký */
+.internship-register-button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.internship-register-button:hover {
+  background: #1d4ed8;
+}
+
+/* Hộp thoại đăng ký */
+.internship-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.internship-modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90%;
+  overflow-y: auto;
+  background: white;
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.internship-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.internship-modal-header span {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.internship-modal-header h3 {
+  margin: 7px 0 0;
+  font-size: 20px;
+  color: #1e293b;
+}
+
+.internship-modal-header > button {
+  border: none;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 7px;
+  display: flex;
+  cursor: pointer;
+}
+
+.internship-modal-position {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.internship-modal form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 9px;
+  color: #334155;
+}
+
+.internship-modal form label span {
+  color: #dc2626;
+}
+
+.internship-modal textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  padding: 12px;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.internship-modal textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.internship-modal-count {
+  text-align: right;
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.internship-modal-error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.internship-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.internship-modal-actions button {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.internship-cancel-button {
+  border: 1px solid #cbd5e1;
+  background: white;
+  color: #475569;
+}
+
+.internship-submit-button {
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+.internship-submit-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.internship-submit-button:disabled,
+.internship-cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .internship-modal {
+    padding: 18px;
+  }
+
+  .internship-modal-header h3 {
+    font-size: 17px;
+  }
+
+  .internship-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .internship-modal-actions button {
+    width: 100%;
+  }
+}
+.internship-approved-lecturer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.internship-approved-lecturer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.internship-approved-lecturer span {
+  font-size: 13px;
+}
+
+.internship-approved-lecturer strong {
+  font-size: 15px;
+}
+
+.internship-register-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+/* ================================
+   TRẠNG THÁI ĐĂNG KÝ THỰC TẬP
+   Dán phần này vào CUỐI file InternshipRegistration.css
+================================ */
+
+.my-internship-registrations {
+  margin: 28px 0;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+.my-internship-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.my-internship-header h3 {
+  margin: 0 0 6px;
+  color: #1f2937;
+  font-size: 20px;
+}
+
+.my-internship-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.my-internship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.my-internship-card {
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.my-internship-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.my-internship-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.my-internship-card h4 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 17px;
+}
+
+.my-internship-code {
+  margin: 0 0 10px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.my-internship-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.my-internship-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.my-internship-accepted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.my-internship-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.my-internship-not-sent {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.my-internship-description {
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.my-internship-notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.my-internship-notification svg {
+  flex-shrink: 0;
+}
+
+.my-internship-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 12px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.my-internship-empty p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .my-internship-registrations {
+    padding: 15px;
+  }
+
+  .my-internship-header {
+    align-items: flex-start;
+  }
+}

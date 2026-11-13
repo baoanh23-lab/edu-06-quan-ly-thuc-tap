@@ -1,0 +1,819 @@
+
+.enterprise-tracking {
+    width: 100%;
+    color: #1e293b;
+    padding: 4px;
+  }
+  
+  .tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .tracking-header h2 {
+    margin: 0 0 8px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #172554;
+  }
+  
+  .tracking-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  .tracking-refresh-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .tracking-refresh-btn:hover {
+    background: #dbeafe;
+  }
+  
+  .tracking-refresh-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* ALERT */
+  
+  .tracking-alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    margin-bottom: 16px;
+    border-radius: 9px;
+    font-size: 14px;
+  }
+  
+  .tracking-alert span {
+    flex: 1;
+  }
+  
+  .tracking-alert button {
+    display: flex;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .tracking-alert.error {
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+  }
+  
+  .tracking-alert.success {
+    color: #15803d;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+  }
+  
+  /* STATISTICS */
+  
+  .tracking-statistics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  
+  .tracking-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 19px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  }
+  
+  .tracking-stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+  }
+  
+  .tracking-stat-icon.blue {
+    color: #2563eb;
+    background: #eff6ff;
+  }
+  
+  .tracking-stat-icon.orange {
+    color: #ea580c;
+    background: #fff7ed;
+  }
+  
+  .tracking-stat-icon.green {
+    color: #16a34a;
+    background: #f0fdf4;
+  }
+  
+  .tracking-stat-card span {
+    display: block;
+    margin-bottom: 5px;
+    color: #64748b;
+    font-size: 13px;
+  }
+  
+  .tracking-stat-card strong {
+    font-size: 25px;
+    color: #172554;
+  }
+  
+  /* MAIN CONTENT */
+  
+  .tracking-content {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.4fr);
+    gap: 18px;
+    align-items: start;
+  }
+  
+  .tracking-list-panel,
+  .tracking-detail-panel {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  }
+  
+  .tracking-panel-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 19px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .tracking-panel-header h3,
+  .tracking-detail-header h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+    color: #172554;
+  }
+  
+  .tracking-panel-header p,
+  .tracking-detail-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+  }
+  
+  .tracking-search {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #94a3b8;
+  }
+  
+  .tracking-search:focus-within {
+    border-color: #60a5fa;
+  }
+  
+  .tracking-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #334155;
+    font-size: 13px;
+    background: transparent;
+  }
+  
+  /* STUDENT LIST */
+  
+  .tracking-student-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tracking-student-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.2s;
+  }
+  
+  .tracking-student-card:last-child {
+    border-bottom: none;
+  }
+  
+  .tracking-student-card:hover,
+  .tracking-student-card.active {
+    background: #f8fbff;
+  }
+  
+  .tracking-student-card.active {
+    border-left: 3px solid #2563eb;
+  }
+  
+  .tracking-student-avatar,
+  .tracking-profile-avatar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 700;
+  }
+  
+  .tracking-student-avatar {
+    width: 43px;
+    height: 43px;
+    font-size: 17px;
+  }
+  
+  .tracking-student-info {
+    min-width: 0;
+    flex: 1;
+  }
+  
+  .tracking-student-info h4 {
+    margin: 0 0 5px;
+    color: #1e293b;
+    font-size: 14px;
+  }
+  
+  .tracking-student-info > span:not(.tracking-status) {
+    color: #64748b;
+    font-size: 12px;
+  }
+  
+  .tracking-student-info p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 8px 0;
+    color: #475569;
+    font-size: 12px;
+  }
+  
+  .tracking-status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  
+  .tracking-status.working {
+    color: #1d4ed8;
+    background: #dbeafe;
+  }
+  
+  .tracking-status.completed {
+    color: #15803d;
+    background: #dcfce7;
+  }
+  
+  .tracking-status.waiting {
+    color: #a16207;
+    background: #fef9c3;
+  }
+  
+  .tracking-status.paused {
+    color: #c2410c;
+    background: #ffedd5;
+  }
+  
+  .tracking-view-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    padding: 8px 10px;
+    border: 1px solid #bfdbfe;
+    border-radius: 7px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .tracking-view-btn:hover {
+    background: #dbeafe;
+  }
+  
+  /* EMPTY */
+  
+  .tracking-empty,
+  .tracking-detail-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: #94a3b8;
+  }
+  
+  .tracking-empty h4,
+  .tracking-detail-empty h3 {
+    margin: 12px 0 7px;
+    color: #334155;
+  }
+  
+  .tracking-empty p,
+  .tracking-detail-empty p {
+    max-width: 340px;
+    margin: 5px 0 0;
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  
+  .tracking-empty.small {
+    padding: 24px 15px;
+  }
+  
+  /* DETAIL */
+  
+  .tracking-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .tracking-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: #64748b;
+    cursor: pointer;
+  }
+  
+  .tracking-close-btn:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+  }
+  
+  .tracking-student-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px;
+  }
+  
+  .tracking-profile-avatar {
+    width: 58px;
+    height: 58px;
+    font-size: 22px;
+  }
+  
+  .tracking-student-profile h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    color: #172554;
+  }
+  
+  .tracking-student-profile span {
+    color: #64748b;
+    font-size: 13px;
+  }
+  
+  /* INFORMATION */
+  
+  .tracking-information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 0 20px 20px;
+  }
+  
+  .tracking-information-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+  }
+  
+  .tracking-information-item > svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #64748b;
+  }
+  
+  .tracking-information-item span {
+    display: block;
+    margin-bottom: 5px;
+    color: #94a3b8;
+    font-size: 12px;
+  }
+  
+  .tracking-information-item strong {
+    display: block;
+    overflow-wrap: anywhere;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  /* PROGRESS */
+  
+  .tracking-progress-box {
+    margin: 0 20px 22px;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    background: #f8fafc;
+  }
+  
+  .tracking-progress-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 11px;
+    font-size: 13px;
+  }
+  
+  .tracking-progress-heading span {
+    color: #64748b;
+  }
+  
+  .tracking-progress-heading strong {
+    color: #2563eb;
+  }
+  
+  .tracking-progress-track {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #e2e8f0;
+  }
+  
+  .tracking-progress-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: #3b82f6;
+    transition: width 0.3s;
+  }
+  
+  /* JOURNAL AND EVIDENCE */
+  
+  .tracking-journal-section,
+  .tracking-evidence-section {
+    padding: 19px;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .tracking-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .tracking-section-heading h3 {
+    margin: 0 0 5px;
+    color: #172554;
+    font-size: 16px;
+  }
+  
+  .tracking-section-heading p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 12px;
+  }
+  
+  .tracking-section-heading > svg {
+    color: #64748b;
+  }
+  
+  .tracking-journal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+  
+  .tracking-journal-card {
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    background: #fff;
+  }
+  
+  .tracking-journal-card.active {
+    border-color: #93c5fd;
+    background: #f8fbff;
+  }
+  
+  .tracking-journal-date {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .tracking-journal-card > p {
+    margin: 10px 0;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  
+  .tracking-journal-card > button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 7px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .tracking-journal-card > button:hover {
+    background: #dbeafe;
+  }
+  
+  /* EVIDENCE */
+  
+  .tracking-evidence-section {
+    background: #f8fafc;
+  }
+  
+  .tracking-evidence-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  
+  .tracking-evidence-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    background: #fff;
+  }
+  
+  .tracking-evidence-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #2563eb;
+  }
+  
+  .tracking-evidence-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+    flex: 1;
+  }
+  
+  .tracking-evidence-info strong {
+    overflow-wrap: anywhere;
+    color: #334155;
+    font-size: 13px;
+  }
+  
+  .tracking-evidence-info span {
+    color: #94a3b8;
+    font-size: 11px;
+  }
+  
+  .tracking-evidence-item > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 7px;
+    background: #eff6ff;
+    color: #2563eb;
+    cursor: pointer;
+  }
+  
+  .tracking-evidence-item > button:hover {
+    background: #dbeafe;
+  }
+  
+  .tracking-evidence-item > button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* LOADING */
+  
+  .tracking-spin {
+    animation: tracking-spin 1s linear infinite;
+  }
+  
+  @keyframes tracking-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 1100px) {
+    .tracking-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .tracking-student-list {
+      max-height: 550px;
+      overflow-y: auto;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .tracking-header {
+      flex-direction: column;
+    }
+  
+    .tracking-statistics {
+      grid-template-columns: 1fr;
+    }
+  
+    .tracking-information-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .tracking-student-card {
+      flex-wrap: wrap;
+    }
+  
+    .tracking-view-btn {
+      margin-left: auto;
+    }
+  
+    .tracking-progress-heading {
+      flex-direction: column;
+    }
+  }
+  
+/* =====================================================
+   BÁO CÁO THỰC TẬP - DOANH NGHIỆP
+===================================================== */
+
+.tracking-report-section {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.tracking-report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.tracking-report-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.tracking-report-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.tracking-report-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tracking-report-info strong {
+  color: #1f2937;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.tracking-report-info > span:not(.tracking-report-status) {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.tracking-report-status {
+  width: fit-content;
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tracking-report-status.pending {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.tracking-report-status.approved {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.tracking-report-status.rejected {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.tracking-report-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.tracking-report-download:hover {
+  background: #dbeafe;
+}
+
+.tracking-report-download:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .tracking-report-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .tracking-report-info {
+    width: calc(100% - 60px);
+  }
+
+  .tracking-report-download {
+    margin-left: 58px;
+  }
+}

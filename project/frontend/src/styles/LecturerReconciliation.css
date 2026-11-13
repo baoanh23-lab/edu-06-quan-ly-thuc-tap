@@ -1,0 +1,620 @@
+
+.reconciliation-page {
+    padding: 25px;
+    color: #1e293b;
+    width: 100%;
+  }
+  
+  .reconciliation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 25px;
+  }
+  
+  .reconciliation-header h1 {
+    margin: 0 0 8px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .reconciliation-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  .reconciliation-refresh,
+  .reconciliation-view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+  
+  .reconciliation-refresh {
+    padding: 10px 16px;
+    background: #eff6ff;
+    color: #2563eb;
+  }
+  
+  .reconciliation-refresh:hover {
+    background: #dbeafe;
+  }
+  
+  .reconciliation-refresh:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .reconciliation-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 22px;
+  }
+  
+  .reconciliation-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  }
+  
+  .reconciliation-stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+  }
+  
+  .reconciliation-stat-icon.blue {
+    color: #2563eb;
+    background: #eff6ff;
+  }
+  
+  .reconciliation-stat-icon.orange {
+    color: #d97706;
+    background: #fffbeb;
+  }
+  
+  .reconciliation-stat-icon.green {
+    color: #16a34a;
+    background: #f0fdf4;
+  }
+  
+  .reconciliation-stat-card span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  
+  .reconciliation-stat-card strong {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .reconciliation-content {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .reconciliation-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .reconciliation-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 470px;
+    padding: 10px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    color: #64748b;
+  }
+  
+  .reconciliation-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #1e293b;
+  }
+  
+  .reconciliation-toolbar select,
+  .reconciliation-form select {
+    min-width: 180px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #334155;
+  }
+  
+  .reconciliation-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .reconciliation-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+  }
+  
+  .reconciliation-table th {
+    padding: 15px 18px;
+    text-align: left;
+    font-size: 12px;
+    color: #64748b;
+    background: #f8fafc;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  
+  .reconciliation-table td {
+    padding: 15px 18px;
+    border-top: 1px solid #f1f5f9;
+    font-size: 13px;
+  }
+  
+  .reconciliation-table tbody tr:hover {
+    background: #fafcff;
+  }
+  
+  .reconciliation-student {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  
+  .reconciliation-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    flex-shrink: 0;
+  }
+  
+  .reconciliation-avatar.large {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .reconciliation-student strong,
+  .reconciliation-student span {
+    display: block;
+  }
+  
+  .reconciliation-student strong {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  
+  .reconciliation-student span {
+    color: #64748b;
+    font-size: 12px;
+  }
+  
+  .reconciliation-status {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .reconciliation-status.done {
+    color: #15803d;
+    background: #dcfce7;
+  }
+  
+  .reconciliation-status.pending {
+    color: #b45309;
+    background: #fef3c7;
+  }
+  
+  .reconciliation-view-btn {
+    padding: 8px 12px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+  }
+  
+  .reconciliation-view-btn:hover {
+    background: #dbeafe;
+  }
+  
+  .reconciliation-empty {
+    text-align: center !important;
+    padding: 45px 20px !important;
+    color: #94a3b8;
+  }
+  
+  .reconciliation-empty p {
+    margin: 10px 0 0;
+  }
+  
+  .reconciliation-table-footer {
+    padding: 14px 18px;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 12px;
+  }
+  
+  .reconciliation-toast {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 13px;
+  }
+  
+  .reconciliation-toast.success {
+    color: #15803d;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+  }
+  
+  .reconciliation-toast.error {
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+  }
+  
+  .reconciliation-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.55);
+  }
+  
+  .reconciliation-modal {
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  .reconciliation-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .reconciliation-modal-header h2 {
+    margin: 0 0 6px;
+    font-size: 19px;
+  }
+  
+  .reconciliation-modal-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+  }
+  
+  .reconciliation-close {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: #475569;
+    cursor: pointer;
+  }
+  
+  .reconciliation-close:hover {
+    background: #e2e8f0;
+  }
+  
+  .reconciliation-modal-body {
+    padding: 22px 24px;
+  }
+  
+  .reconciliation-modal-loading {
+    padding: 50px;
+    text-align: center;
+    color: #64748b;
+  }
+  
+  .reconciliation-modal-loading p {
+    margin-top: 12px;
+  }
+  
+  .reconciliation-student-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+  }
+  
+  .reconciliation-student-info strong,
+  .reconciliation-student-info span {
+    display: block;
+  }
+  
+  .reconciliation-student-info strong {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  
+  .reconciliation-student-info span {
+    color: #64748b;
+    font-size: 13px;
+  }
+  
+  .reconciliation-evaluation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  
+  .reconciliation-evaluation-card {
+    padding: 17px;
+    border: 1px solid #bfdbfe;
+    border-radius: 11px;
+    background: #f8fbff;
+  }
+  
+  .reconciliation-evaluation-card.lecturer {
+    border-color: #c7d2fe;
+    background: #fafaff;
+  }
+  
+  .reconciliation-evaluation-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #2563eb;
+    font-size: 13px;
+  }
+  
+  .reconciliation-evaluation-card.lecturer
+  .reconciliation-evaluation-title {
+    color: #4f46e5;
+  }
+  
+  .reconciliation-score {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    margin: 20px 0;
+    color: #d97706;
+  }
+  
+  .reconciliation-score strong {
+    font-size: 32px;
+    color: #1e293b;
+  }
+  
+  .reconciliation-score span {
+    color: #64748b;
+    font-size: 13px;
+  }
+  
+  .reconciliation-comment span,
+  .reconciliation-result-comment span {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .reconciliation-comment p,
+  .reconciliation-result-comment p {
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #334155;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  
+  .reconciliation-form {
+    margin-top: 24px;
+    padding: 19px;
+    border: 1px solid #e2e8f0;
+    border-radius: 11px;
+  }
+  
+  .reconciliation-form-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+    color: #2563eb;
+  }
+  
+  .reconciliation-form-heading h3 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 16px;
+  }
+  
+  .reconciliation-form label {
+    display: block;
+    margin: 14px 0 8px;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .reconciliation-form select {
+    width: 100%;
+  }
+  
+  .reconciliation-form textarea {
+    display: block;
+    width: 100%;
+    resize: vertical;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+  }
+  
+  .reconciliation-form textarea:focus,
+  .reconciliation-form select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .reconciliation-form-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 13px;
+    color: #92400e;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  .reconciliation-form-note svg {
+    flex-shrink: 0;
+  }
+  
+  .reconciliation-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .reconciliation-submit:hover {
+    background: #1d4ed8;
+  }
+  
+  .reconciliation-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .reconciliation-result-view {
+    padding: 15px;
+    border-radius: 9px;
+    background: #f8fafc;
+  }
+  
+  .reconciliation-result-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13px;
+  }
+  
+  .reconciliation-result-row span {
+    color: #64748b;
+  }
+  
+  .reconciliation-result-row strong {
+    color: #15803d;
+  }
+  
+  .reconciliation-result-comment {
+    padding-top: 14px;
+  }
+  
+  .spin {
+    animation: reconciliation-spin 1s linear infinite;
+  }
+  
+  @keyframes reconciliation-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .reconciliation-page {
+      padding: 15px;
+    }
+  
+    .reconciliation-header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    .reconciliation-stats {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  
+    .reconciliation-toolbar {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  
+    .reconciliation-search {
+      max-width: none;
+      box-sizing: border-box;
+    }
+  
+    .reconciliation-toolbar select {
+      width: 100%;
+    }
+  
+    .reconciliation-evaluation-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .reconciliation-modal-body {
+      padding: 16px;
+    }
+  
+    .reconciliation-modal-header {
+      padding: 16px;
+    }
+  }
+  

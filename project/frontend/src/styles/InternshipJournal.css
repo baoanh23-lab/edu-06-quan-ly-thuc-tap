@@ -1,0 +1,849 @@
+
+/* =====================================
+   TRANG NHẬT KÝ THỰC TẬP
+===================================== */
+
+.nk-page {
+  width: 100%;
+  padding: 28px;
+  color: #1e293b;
+  box-sizing: border-box;
+}
+
+.nk-page * {
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.nk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.nk-breadcrumb {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.nk-header h1 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.nk-header p {
+  margin: 9px 0 0;
+  color: #8490a1;
+  font-size: 14px;
+}
+
+/* BUTTON */
+
+.nk-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.nk-btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.nk-btn-primary:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* ALERT */
+
+.nk-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.nk-alert button {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nk-success {
+  color: #15803d;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+}
+
+.nk-error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+/* =====================================
+   THỐNG KÊ
+===================================== */
+
+.nk-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.nk-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border: 1px solid #e8edf3;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+}
+
+.nk-stat-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+}
+
+.nk-stat-icon.blue {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.nk-stat-icon.green {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+.nk-stat-icon.orange {
+  color: #ea580c;
+  background: #fff7ed;
+}
+
+.nk-stat-card span {
+  display: block;
+  color: #8490a1;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.nk-stat-card strong {
+  display: block;
+  color: #1e293b;
+  font-size: 23px;
+}
+
+/* =====================================
+   NỘI DUNG CHÍNH
+===================================== */
+
+.nk-content {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+}
+
+.nk-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.nk-section-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  color: #1e293b;
+  font-size: 19px;
+}
+
+.nk-section-header h2 svg {
+  color: #2563eb;
+}
+
+.nk-section-header p {
+  margin: 8px 0 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.nk-btn-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  color: #475569;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.nk-btn-refresh:hover {
+  color: #2563eb;
+  border-color: #93c5fd;
+}
+
+/* =====================================
+   CHỌN QUÁ TRÌNH VÀ TÌM KIẾM
+===================================== */
+
+.nk-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.nk-select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nk-select-wrapper label {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nk-select-wrapper select {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px;
+  color: #334155;
+  background: white;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  outline: none;
+  font-size: 13px;
+}
+
+.nk-select-wrapper select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.nk-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: end;
+  height: 43px;
+  padding: 0 13px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  color: #94a3b8;
+}
+
+.nk-search:focus-within {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.nk-search input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #334155;
+  font-size: 13px;
+  background: transparent;
+}
+
+/* =====================================
+   THÔNG TIN QUÁ TRÌNH THỰC TẬP
+===================================== */
+
+.nk-process-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 22px 0 28px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.nk-process-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.nk-process-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nk-process-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.nk-process-label {
+  display: block;
+  color: #8792a2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 5px;
+}
+
+.nk-process-heading h3 {
+  margin: 0;
+  font-size: 19px;
+  color: #1e293b;
+}
+
+.nk-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nk-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.nk-status.in-progress {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.nk-status.not-started {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.nk-status.completed {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.nk-process-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 22px 0;
+}
+
+.nk-process-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nk-detail-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8490a1;
+  font-size: 13px;
+}
+
+.nk-detail-label svg {
+  color: #64748b;
+}
+
+.nk-process-detail strong {
+  color: #263449;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.nk-process-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  background: #f8fafc;
+  border-radius: 10px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.nk-process-summary svg {
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.nk-process-summary strong {
+  color: #334155;
+}
+
+/* =====================================
+   TIMELINE NHẬT KÝ
+===================================== */
+
+.nk-timeline {
+  position: relative;
+  padding: 8px 0 8px 12px;
+}
+
+.nk-timeline-item {
+  display: flex;
+  gap: 18px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.nk-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.nk-timeline-marker {
+  width: 36px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.nk-timeline-item:not(:last-child)
+.nk-timeline-marker::after {
+  content: "";
+  position: absolute;
+  top: 39px;
+  bottom: -25px;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.nk-timeline-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 2px solid #bfdbfe;
+  z-index: 1;
+}
+
+.nk-journal-card {
+  flex: 1;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.nk-journal-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 5px 18px rgba(37, 99, 235, 0.07);
+}
+
+.nk-journal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.nk-journal-date span {
+  display: block;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+
+.nk-journal-date h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 17px;
+}
+
+.nk-journal-content {
+  margin-top: 17px;
+  padding: 15px 17px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border-left: 3px solid #60a5fa;
+}
+
+.nk-journal-content p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.nk-journal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+.nk-journal-footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* =====================================
+   NÚT SỬA / XÓA
+===================================== */
+
+.nk-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nk-btn-edit,
+.nk-btn-delete {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nk-btn-edit {
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+}
+
+.nk-btn-edit:hover {
+  background: #dbeafe;
+}
+
+.nk-btn-delete {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+}
+
+.nk-btn-delete:hover {
+  background: #fee2e2;
+}
+
+/* =====================================
+   TRẠNG THÁI TRỐNG / LOADING
+===================================== */
+
+.nk-empty {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+}
+
+.nk-empty > svg {
+  color: #93c5fd;
+  margin-bottom: 12px;
+}
+
+.nk-empty h3 {
+  color: #334155;
+  font-size: 17px;
+  margin: 5px 0 8px;
+}
+
+.nk-empty p {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 430px;
+  margin: 0;
+}
+
+.nk-spin {
+  animation: nk-rotate 1s linear infinite;
+}
+
+@keyframes nk-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================
+   FORM MODAL
+===================================== */
+
+.nk-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.nk-modal {
+  width: 100%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+.nk-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.nk-modal-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 21px;
+}
+
+.nk-modal-header p {
+  margin: 8px 0 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.nk-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: #64748b;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nk-close:hover {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+.nk-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.nk-form-group label {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nk-form-group label span {
+  color: #dc2626;
+}
+
+.nk-form-group input,
+.nk-form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  outline: none;
+  color: #334155;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.nk-form-group input:focus,
+.nk-form-group textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.nk-form-group textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.nk-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.nk-btn-cancel {
+  padding: 10px 17px;
+  color: #475569;
+  background: white;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nk-btn-cancel:hover {
+  background: #f8fafc;
+}
+
+.nk-modal-footer .nk-btn-primary:disabled,
+.nk-modal-footer .nk-btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .nk-page {
+    padding: 16px;
+  }
+
+  .nk-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nk-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .nk-content {
+    padding: 17px;
+  }
+
+  .nk-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .nk-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nk-process-card {
+    padding: 18px;
+  }
+
+  .nk-process-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nk-process-details {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .nk-timeline {
+    padding-left: 0;
+  }
+
+  .nk-timeline-item {
+    gap: 10px;
+  }
+
+  .nk-journal-card {
+    padding: 16px;
+  }
+
+  .nk-journal-header {
+    gap: 8px;
+  }
+
+  .nk-journal-date h3 {
+    font-size: 15px;
+  }
+
+  .nk-modal {
+    padding: 19px;
+  }
+}
+
+@media (max-width: 420px) {
+  .nk-journal-header {
+    flex-direction: column;
+  }
+
+  .nk-journal-footer {
+    justify-content: flex-start;
+  }
+
+  .nk-process-summary {
+    align-items: flex-start;
+  }
+}
